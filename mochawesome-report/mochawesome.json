@@ -1,0 +1,116 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2018-02-28T11:43:08.075Z",
+    "end": "2018-02-28T11:43:08.084Z",
+    "duration": 9,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "passPercentClass": "success",
+    "pendingPercentClass": "danger"
+  },
+  "suites": {
+    "uuid": "f2936382-42d9-4b3a-90c6-e7a19a21571e",
+    "title": "",
+    "fullFile": "",
+    "file": "",
+    "beforeHooks": [],
+    "afterHooks": [],
+    "tests": [],
+    "suites": [
+      {
+        "uuid": "258e3117-9d09-4301-ad6e-7e885aebc840",
+        "title": "AuthController",
+        "fullFile": "/Users/iona-kathrynevans/Desktop/mocha_testing/test/controllers/auth.controller.spec.js",
+        "file": "/test/controllers/auth.controller.spec.js",
+        "beforeHooks": [],
+        "afterHooks": [],
+        "tests": [],
+        "suites": [
+          {
+            "uuid": "88165cdc-55f6-4ff2-a43b-8dcabc854792",
+            "title": "isAuthorized",
+            "fullFile": "/Users/iona-kathrynevans/Desktop/mocha_testing/test/controllers/auth.controller.spec.js",
+            "file": "/test/controllers/auth.controller.spec.js",
+            "beforeHooks": [],
+            "afterHooks": [],
+            "tests": [
+              {
+                "title": "Should return false if not authorized",
+                "fullTitle": "AuthController isAuthorized Should return false if not authorized",
+                "timedOut": false,
+                "duration": 1,
+                "state": "passed",
+                "speed": "fast",
+                "pass": true,
+                "fail": false,
+                "pending": false,
+                "code": "assert.equal(false, authController.isAuthorized(['user'], 'admin'));",
+                "err": {},
+                "isRoot": false,
+                "uuid": "4c3b0bb0-1e43-4ea3-9197-7aedfd07c287",
+                "isHook": false,
+                "skipped": false
+              },
+              {
+                "title": "Should return true if authorized",
+                "fullTitle": "AuthController isAuthorized Should return true if authorized",
+                "timedOut": false,
+                "duration": 1,
+                "state": "passed",
+                "speed": "fast",
+                "pass": true,
+                "fail": false,
+                "pending": false,
+                "code": "assert.equal(true, authController.isAuthorized(['user','admin'], 'admin'))",
+                "err": {},
+                "isRoot": false,
+                "uuid": "1b9078c1-5ff8-4459-adf1-f7ee8347ceac",
+                "isHook": false,
+                "skipped": false
+              }
+            ],
+            "suites": [],
+            "passes": [
+              "4c3b0bb0-1e43-4ea3-9197-7aedfd07c287",
+              "1b9078c1-5ff8-4459-adf1-f7ee8347ceac"
+            ],
+            "failures": [],
+            "pending": [],
+            "skipped": [],
+            "duration": 2,
+            "root": false,
+            "rootEmpty": false,
+            "_timeout": 2000
+          }
+        ],
+        "passes": [],
+        "failures": [],
+        "pending": [],
+        "skipped": [],
+        "duration": 0,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 2000
+      }
+    ],
+    "passes": [],
+    "failures": [],
+    "pending": [],
+    "skipped": [],
+    "duration": 0,
+    "root": true,
+    "rootEmpty": true,
+    "_timeout": 2000
+  },
+  "copyrightYear": 2018
+}
