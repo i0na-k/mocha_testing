@@ -56,15 +56,26 @@ describe('isAuthorizedPromise', function(){
 			});
 	})
 
-describe('getIndex functionality',function(){
-	it('getIndex should return a rendered response', function(){
-			var req = {};
-			var res = {
-				render:sinon.spy()
-			};
-			authController.getIndex(req,res);
-			res.render.calledOnce.should.be.true;
-			console.log(res.render);
-			res.render.firstCall.args[0].should.equal('index');
-	})
-})
+describe('getIndex functionality',function() {
+  var user = {};
+  beforeEach(function () {
+    user = {
+      roles: ['user'],
+      isAuthorized: function (neededRole) {
+        return this.roles.indexOf(neededRole) >= 0;
+      }
+    }
+  });
+  it('getIndex should return a rendered response', function () {
+    var isAuth = sinon.stub(user, 'isAuthorized').throws();
+    var req = { user: user };
+    var res = {
+      render: function (){}
+    };
+
+    var mock = sinon.mock(res);
+    mock.expects('render').once().withExactArgs('Error_Message');
+    authController.getIndex(req, res);
+    mock.verify();
+  })
+});

@@ -27,8 +27,18 @@ function isAuthorizedPromise(neededRole,cb){
 	});
 }
 
-function getIndex(req,res){
-	res.render('index');
+function getIndex(req,res) {
+	try {
+    if (req.user.isAuthorized('admin')) {
+      res.render('index');
+    }
+    else {
+
+      res.render('error');
+    }
+  }catch(e){
+		res.render('Error_Message');
+	}
 }
 
 return {isAuthorized, isAuthorizedAsync,setRoles,isAuthorizedPromise,getIndex,
